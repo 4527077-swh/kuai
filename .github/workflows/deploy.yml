@@ -18,11 +18,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      
+      # 核心修改在这里 👇
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        # with:
-          # path: . # 如果你的项目在子目录，在这里指定
-          # node-version: 20 # 指定 Node 版本，可选
+        with:
+          package-manager: pnpm@latest  # 👈 明确指定使用 pnpm 最新版
 
   deploy:
     needs: build
