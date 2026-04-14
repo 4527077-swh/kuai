@@ -24,3 +24,16 @@ const blog = defineCollection({
 });
 
 export const collections = { blog };
+
+// --- 下面是新增的侧边栏配置 ---
+
+export const SIDEBAR = {
+  zh: [
+    {
+      text: "指南",
+      items: [
+        { text: "介绍", link: "/docs/my-first-doc" },
+      ],
+    },
+  ],
+};
